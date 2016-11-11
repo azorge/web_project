@@ -3,5 +3,5 @@ def application(environ, start_response):
   header = [('Content-Type', 'text/plain')]
   query = environ['QUERY_STRING']
   res = '\n'.join(query.split('&'))
-  start_responce(status, header)
+  start_response(status, header)
   return res
